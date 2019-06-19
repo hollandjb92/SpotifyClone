@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Clone</title>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script src="https://kit.fontawesome.com/8943bf9a35.js"></script>
+</head>
+
+<body>
+
+  <div id="fullContainer">
+    <div id="topContainer">
+      <div id="navBarContainer">
+        <nav class="navBar">
+          <a href="index.html" class="logo">
+            <i class="fab fa-wolf-pack-battalion text-white fa-2x mr-1"></i> <span class="appName">AppName</span>
+          </a>
+
+          <div class="navSearch navItems">
+            <div class="navItem">
+              <a href="#" class="navLink" id="searchButton">Search <i class="fas fa-search fa-2x"
+                  id="searchIcon"></i></a>
+            </div>
+          </div>
+
+          <div class="navMenu navItems">
+            <div class="navItem">
+              <a href="index.html" class="navLink" id="homeButton"><i class="fas fa-home fa-lg"></i><span
+                  class="navItemText">Home</span></a>
+            </div>
+            <div class="navItem">
+              <a href="#" class="navLink" id="libraryButton"><i class="fas fa-book-open fa-lg"><span
+                    class="navItemText"></i>Your Library</span></a>
+            </div>
+            <div class="navItem">
+              <a href="#" class="navLink" id="playlistButton"><i class="fas fa-music fa-lg"></i><span
+                  class="navItemText">Playlists</span></a>
+            </div>
+
+
+            <!-- <div class="navItem">
+              <main id="app">
+                <a @click="login" href=" #" class="navLink" id="loginButton"><i class="far fa-user fa-2x"></i><span
+                    class="navItemText">Login</span></a>
+              </main>
+            </div> -->
+          </div>
+        </nav>
+      </div>
+
+      <div id="musicContainer">
+        <div id="musicContent">
+          <!-- everything goes in here -->
+        </div>
+      </div>
+    </div>
+
+    <div id="nowPlayingContainer" class="animated fadeIn">
+      <div id="nowPlayingBar" class="d-flex">
+        <div id="nowPlayingArtist">
+          <div class="content">
+            <span class="albumLink">
+              <img src="https://www.okayplayer.com/wp-content/uploads/2016/08/Blonde-3-715x715.jpg" class="albumImage">
+            </span>
+            <div class="trackInformation">
+              <span class="trackName">
+                <span>Pink + White</span>
+              </span>
+              <span class="artistName">
+                <span>Frank Ocean</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="nowPlayingControls" class="d-flex">
+          <div class="content playerControls">
+            <div class="playerButtons">
+              <button class="controlButton shuffle" title="Shuffle"> <i class="fas fa-random fa-lg"></i></button>
+              <button class="controlButton previous" title="Previous"> <i
+                  class="fas fa-step-backward fa-lg"></i></button>
+              <button class="controlButton play" title="Play"><i class="far fa-play-circle fa-3x"></i></button>
+              <button class="controlButton pause" title="Pause"><i class="far fa-pause-circle fa-3x"></i></button>
+              <button class="controlButton next" title="Next"> <i class="fas fa-step-forward fa-lg"></i></button>
+              <button class="controlButton repeat" title="Repeat"> <i class="fas fa-redo fa-lg"></i></button>
+            </div>
+            <div class="progressBarContainer d-flex">
+              <span class="progressTime current">0:00</span>
+              <div class="progressBar">
+                <div class="progressBarBackground">
+                  <div class="actualProgress"></div>
+                </div>
+              </div>
+              <span class="progressTime remaining">0:00</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="nowPlayingVolume">
+          <div class="volumeBar">
+            <button class="controlButton volume" title="Volume"><i class="fas fa-volume-up fa-lg"></i></button>
+            <div class="progressBar">
+              <div class="progressBarBackground">
+                <div class="actualProgress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

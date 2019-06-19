@@ -1,0 +1,301 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* get a better font later */
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #fff;
+  animation: 20000ms ease-in-out infinite color-change;
+}
+
+
+
+@keyframes color-change {
+  0% {
+    background-color: teal;
+  }
+
+  10% {
+    background-color: orange;
+  }
+
+  20% {
+    background-color: indianred;
+  }
+
+  30% {
+    background-color: violet;
+  }
+
+  40% {
+    background-color: seagreen;
+  }
+
+  50% {
+    background-color: darkturquoise;
+  }
+
+  60% {
+    background-color: salmon;
+  }
+
+  70% {
+    background-color: royalblue;
+  }
+
+  80% {
+    background-color: hotpink
+  }
+
+  90% {
+    background-color: skyblue;
+  }
+
+  100% {
+    background-color: teal;
+  }
+}
+
+#nowPlayingContainer {
+  width: 100%;
+  background-color: #282828;
+  bottom: 0;
+  min-width: 620px;
+  position: fixed;
+}
+
+#nowPlayingBar {
+  height: 120px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#nowPlayingArtist,
+#nowPlayingVolume {
+  width: 30%;
+  min-width: 180px;
+}
+
+#nowPlayingVolume {
+  position: relative;
+  margin-top: 30px;
+
+}
+
+#nowPlayingControls {
+  width: 40%;
+  max-width: 700px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nowPlayingBar .content {
+  width: 100%;
+  height: 100%;
+}
+
+.playerControls .playerButtons {
+  margin: 0 auto;
+  display: table;
+}
+
+.controlButton {
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+  color: #a0a0a0;
+  margin-right: 10px;
+}
+
+.progressTime {
+  color: #a0a0a0;
+  font-size: 12px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 13px;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.progressBarBackground {
+  background-color: #404040;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.actualProgress {
+  background-color: #a0a0a0;
+  height: 4px;
+  width: 0;
+  border-radius: 2px;
+}
+
+.progressBarContainer .progressBar {
+  margin-top: 5px;
+}
+
+#nowPlayingArtist .albumImage {
+  height: 100%;
+  max-width: 100px;
+  margin-right: 15px;
+  float: left;
+  background-size: cover;
+}
+
+.trackInformation {
+  display: table;
+}
+
+.trackInformation .trackName {
+  margin: 6px 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.artistName span {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+
+.volumeBar {
+  width: 180px;
+  position: absolute;
+  right: 30px;
+}
+
+.volumeBar .progressBar {
+  width: 125px;
+}
+
+#topContainer {
+  min-height: 100%;
+  width: 100%;
+}
+
+#navBarContainer {
+  background-color: #000;
+  width: 230px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navBar {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.appName {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.navItems {
+  border-top: 1px solid #a0a0a0;
+  padding: 10px 0;
+}
+
+.navItems:first-of-type {
+  margin-top: 15px;
+}
+
+.navBar .navItem {
+  font-size: 14px;
+  padding: 10px 0;
+  position: relative;
+  font-weight: 700;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.navBar .navLink:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navBar .logo {
+  text-decoration: none;
+}
+
+
+.navBar .navLink {
+  color: #a0a0a0;
+}
+
+#searchIcon {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+#musicContainer {
+  margin-left: 230px;
+  padding-bottom: 120px;
+  width: calc(100%-230px);
+}
+
+#musicContent {
+  padding: 20px 20px 0px;
+}
+
+#searchItem {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 800;
+  font-size: 30px;
+  padding: 0 30px;
+}
+
+#searchItem::placeholder {
+  color: #fff;
+}
+
+.navItemText {
+  margin-left: 30px;
+}
+
+#searchBar {
+  animation-duration: 1s;
+}
+
+.navItem:nth-of-type(4) {
+  position: absolute;
+  bottom: 150px;
+  left: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#musicContainer {
+  overflow: auto;
+}
+
+.coverArt {
+  width: 15%;
+  display: inline;
+}
+
+.trackInfo {
+  width: 60%;
+  display: inline;
+}
+
+.playButton {
+  width: 25%;
+  display: inline;
+}
+
+#musicContainer img {
+  width: 64px;
+  height: 64px;
+}
