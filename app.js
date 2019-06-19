@@ -39,7 +39,7 @@ $(document).ready(function () {
               Authorization: "Bearer " + token
             }
           }).then(response => {
-            return response.json()
+            return JSON.parse(response) //.json()
           }).then(data => {
             this.me = data
           })
