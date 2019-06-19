@@ -32,15 +32,26 @@ $(document).ready(function () {
           console.log(payload);
           popup.close()
 
-          fetch("https://api.spotify.com/v1/me", {
+          $.ajax({
+            url: "https://api.spotify.com/v1/me",
+            type: "GET",
             headers: {
-              "Authorization": "Bearer ${payload}"
+              Authorization: "Bearer " + token
             }
           }).then(response => {
             return response.json()
           }).then(data => {
             this.me = data
           })
+          // fetch("https://api.spotify.com/v1/me", {
+          //   headers: {
+          //     "Authorization": "Bearer ${payload}"
+          //   }
+          // }).then(response => {
+          //   return response.json()
+          // }).then(data => {
+          //   this.me = data
+          // })
         }
       }
     },
