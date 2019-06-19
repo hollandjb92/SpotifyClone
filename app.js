@@ -34,7 +34,7 @@ $(document).ready(function () {
 
           fetch("https://api.spotify.com/v1/me", {
             headers: {
-              "Authorization": "Bearer ${payload}"
+              "Authorization": "Bearer " + token
             }
           }).then(response => {
             return response.json()
