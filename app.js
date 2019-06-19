@@ -12,7 +12,7 @@
 $(document).ready(function () {
 
   let token =
-    "BQCjLdwTAOsylhOrIb-2EE8IqLtH7aGifVpdD0Y7sRIoBY10mNpTPipZBVeN2PFTyR5-5MOdc2z26P4C7BTaSdlR9uW-2kGjln6uLjXdPY3WSzQWF4CgcNICG5fMpofHs3ax5oasKbl-GZVubvkQSBEKWj6QKUsYSdODw54";
+    "BQDkSi3JXyvSrTo8R8-QQvoS2X5lbmSGspIwPCaBUos4sOQjLWp_B9-eY6DDO264cchkaoNh-wV3cAoUjrhHUEmckFPgWuFGKS4u6XnS1p-sP6nmlHfHtCnUAFNV6I9_23dBg-cF9tdqgdMXV799f68bz4ZmBQ2Q4Lkx5Jc";
 
   const app = new Vue({
     el: "#app",
