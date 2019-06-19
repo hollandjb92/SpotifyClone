@@ -20,7 +20,7 @@ $(document).ready(function () {
       return {
         client_id: "ae26b1906ba7498bb7dbfaea08485622",
         scopes: "streaming user-modify-playback-state user-read-birthdate user-read-private user-read-email user-read-currently-playing user-read-playback-state user-library-read user-library-modify",
-        redirect_uri: "file:///C:/Users/hollandjb/Desktop/GWBootCamp/SpotifyClone/index.html",
+        redirect_uri: "https://hollandjb92.github.io/SpotifyClone/",
         me: null
       }
     },
