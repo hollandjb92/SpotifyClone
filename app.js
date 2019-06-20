@@ -11,50 +11,8 @@
 
 $(document).ready(function () {
 
-  // let token =
-  //   "BQDkSi3JXyvSrTo8R8-QQvoS2X5lbmSGspIwPCaBUos4sOQjLWp_B9-eY6DDO264cchkaoNh-wV3cAoUjrhHUEmckFPgWuFGKS4u6XnS1p-sP6nmlHfHtCnUAFNV6I9_23dBg-cF9tdqgdMXV799f68bz4ZmBQ2Q4Lkx5Jc";
-
-  const app = new Vue({
-    el: "#app",
-    data() {
-      return {
-        client_id: "ae26b1906ba7498bb7dbfaea08485622",
-        scopes: "streaming user-modify-playback-state user-read-birthdate user-read-private user-read-email user-read-currently-playing user-read-playback-state user-library-read user-library-modify",
-        redirect_uri: "https://hollandjb92.github.io/SpotifyClone/",
-        me: null
-      }
-    },
-    methods: {
-      login() {
-        let popup = window.open(`https://accounts.spotify.com/authorize?client_id=${this.client_id}&response_type=token&redirect_uri=${this.redirect_uri}&scope=${this.scopes}&show_dialog=true&state=123`, 'Login with Spotify', 'width=800,height=600')
-
-        window.spotifyCallback = (payload) => {
-          console.log(payload);
-          popup.close()
-
-          $.ajax({
-            url: "https://api.spotify.com/v1/me",
-            type: "GET",
-            headers: {
-              Authorization: "Bearer " + token
-            }
-          }).then(response => {
-            return JSON.parse(response) //.json()
-          }).then(data => {
-            this.me = data
-          })
-        }
-      }
-    },
-    mounted() {
-      this.token = window.location.hash.substr(1).split("&")[0].split("=")[1]
-      if (this.token) {
-        window.opener.spotifyCallback(this.token)
-      }
-    }
-  })
-
-
+  let token =
+    "BQDkSi3JXyvSrTo8R8-QQvoS2X5lbmSGspIwPCaBUos4sOQjLWp_B9-eY6DDO264cchkaoNh-wV3cAoUjrhHUEmckFPgWuFGKS4u6XnS1p-sP6nmlHfHtCnUAFNV6I9_23dBg-cF9tdqgdMXV799f68bz4ZmBQ2Q4Lkx5Jc";
 
 
   window.onSpotifyWebPlaybackSDKReady = () => {
@@ -297,7 +255,46 @@ $(document).ready(function () {
 
 //old code - use later?
 
-// 
+// const app = new Vue({
+//   el: "#app",
+//   data() {
+//     return {
+//       client_id: "ae26b1906ba7498bb7dbfaea08485622",
+//       scopes: "streaming user-modify-playback-state user-read-birthdate user-read-private user-read-email user-read-currently-playing user-read-playback-state user-library-read user-library-modify",
+//       redirect_uri: "https://hollandjb92.github.io/SpotifyClone/",
+//       me: null
+//     }
+//   },
+//   methods: {
+//     login() {
+//       let popup = window.open(`https://accounts.spotify.com/authorize?client_id=${this.client_id}&response_type=token&redirect_uri=${this.redirect_uri}&scope=${this.scopes}&show_dialog=true&state=123`, 'Login with Spotify', 'width=800,height=600')
+
+//       window.spotifyCallback = (payload) => {
+//         console.log(payload);
+//         popup.close()
+
+//         $.ajax({
+//           url: "https://api.spotify.com/v1/me",
+//           type: "GET",
+//           headers: {
+//             Authorization: "Bearer " + token
+//           }
+//         }).then(response => {
+//           return JSON.parse(response) //.json()
+//         }).then(data => {
+//           this.me = data
+//         })
+//       }
+//     }
+//   },
+//   mounted() {
+//     this.token = window.location.hash.substr(1).split("&")[0].split("=")[1]
+//     if (this.token) {
+//       window.opener.spotifyCallback(this.token)
+//     }
+//   }
+// })
+
 
 
 // $(".repeat").on("click", function () {
