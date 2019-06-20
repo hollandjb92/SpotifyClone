@@ -11,8 +11,8 @@
 
 $(document).ready(function () {
 
-  let token =
-    "BQDkSi3JXyvSrTo8R8-QQvoS2X5lbmSGspIwPCaBUos4sOQjLWp_B9-eY6DDO264cchkaoNh-wV3cAoUjrhHUEmckFPgWuFGKS4u6XnS1p-sP6nmlHfHtCnUAFNV6I9_23dBg-cF9tdqgdMXV799f68bz4ZmBQ2Q4Lkx5Jc";
+  // let token =
+  //   "BQDkSi3JXyvSrTo8R8-QQvoS2X5lbmSGspIwPCaBUos4sOQjLWp_B9-eY6DDO264cchkaoNh-wV3cAoUjrhHUEmckFPgWuFGKS4u6XnS1p-sP6nmlHfHtCnUAFNV6I9_23dBg-cF9tdqgdMXV799f68bz4ZmBQ2Q4Lkx5Jc";
 
   const app = new Vue({
     el: "#app",
@@ -43,15 +43,6 @@ $(document).ready(function () {
           }).then(data => {
             this.me = data
           })
-          // fetch("https://api.spotify.com/v1/me", {
-          //   headers: {
-          //     "Authorization": "Bearer ${payload}"
-          //   }
-          // }).then(response => {
-          //   return response.json()
-          // }).then(data => {
-          //   this.me = data
-          // })
         }
       }
     },
